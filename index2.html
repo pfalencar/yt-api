@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Página com UX</title>        
     </head>
-    
+
     <body>
         <img src="img/chefinho.gif" alt="chefinho gif" />
         <button id="btn-js">Clique aqui</button>
@@ -23,9 +23,11 @@
             })
 
             setTimeout(function(){
+                let content='';
                 for (let i = 0; i < 10000; i++) {
-                    document.getElementById('hello').innerHTML += 'O poderoso chefinho!';
+                    content += 'O poderoso chefinho!';
                 }
+                $hello.innerHTML = content;
             }, 100);
             
         </script>

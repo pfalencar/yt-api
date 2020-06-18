@@ -1,28 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Página com UX</title>
-        
+	<meta name="viewport" content="width-device-width, initial-scale-1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Página com UX</title>        
     </head>
     <body>
-        <img src="img/chefinho.gif" />
-        <button id="btn-js" type="button">Clique aqui</button>
+        <h1 id="titulo"></h1>
+        <img id="boss" src="img/chefinho.gif" alt="chefinho gif" />
+        <button id="btn-js">Clique aqui</button>
         <h2 id="hello">
-
 
         </h2>
         <script>
-            const $button = documento.getElementById('bnt-js');
-            const $hello = documento.getElementById('hello');
+            const $button = document.getElementById('btn-js');
+            const $hello = document.getElementById('hello');
+
+            const $boss = document.getElementById('boss');
+            const $titulo = document.getElementById('titulo');
 
             $button.addEventListener("click", e => { e.preventDefault();
-            $hello.innerHTML += "Fui clicado!<br>";
+            $hello.innerHTML += 'Fui clicado!<br>';
 
-            });
+            })
 
-            for (let i = 0; i < 100; i++){
-                console.log("Chefinho!");
+            $boss.addEventListener("click", e => { e.preventDefault();
+            $titulo.innerHTML += 'Eu sou o chefinho!<br>';
+
+            })
+
+            for (let i = 0; i < 9; i++) {
+                console.log('O Poderoso Chefinho');
             }
         </script>
     </body>

@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
 	<meta name="viewport" content="width-device-width, initial-scale-1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Página com UX</title>        
     </head>
+    
     <body>
-        <h1 id="titulo"></h1>
-        <img id="boss" src="img/chefinho.gif" alt="chefinho gif" />
+        <img src="img/chefinho.gif" alt="chefinho gif" />
         <button id="btn-js">Clique aqui</button>
         <h2 id="hello">
 
@@ -17,22 +18,17 @@
             const $button = document.getElementById('btn-js');
             const $hello = document.getElementById('hello');
 
-            const $boss = document.getElementById('boss');
-            const $titulo = document.getElementById('titulo');
-
             $button.addEventListener("click", e => { e.preventDefault();
-            $hello.innerHTML += 'Fui clicado!<br>';
-
+                $hello.innerHTML += 'Fui clicado!<br>';
             })
 
-            $boss.addEventListener("click", e => { e.preventDefault();
-            $titulo.innerHTML += 'Eu sou o chefinho!<br>';
-
-            })
-
-            for (let i = 0; i < 9; i++) {
-                console.log('O Poderoso Chefinho');
-            }
+            setTimeout(function(){
+                for (let i = 0; i < 10000; i++) {
+                    document.getElementById('hello').innerHTML += 'O poderoso chefinho!';
+                }
+            }, 100);
+            
         </script>
     </body>
+
 </html>

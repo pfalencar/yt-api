@@ -20,16 +20,15 @@
 
             $button.addEventListener("click", e => { e.preventDefault();
                 $hello.innerHTML += 'Fui clicado!<br>';
-            }) 
+            })
 
-            requestAnimationFrame(function(){
+            requestIdleCallback(function(){
                 let content='';
                 for (let i = 0; i < 10000; i++) {
                     content += 'O poderoso chefinho!';
                 }
                 $hello.innerHTML = content;
-            }) 
-
+            })
         </script>
     </body>
 

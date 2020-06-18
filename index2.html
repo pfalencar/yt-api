@@ -5,30 +5,22 @@
         <meta charset="UTF-8">
 	<meta name="viewport" content="width-device-width, initial-scale-1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Página com UX</title>        
+        <title>Página com UX</title>    
+        <link rel="stylesheet" type="text/css" href="css/app.css">    
     </head>
 
     <body>
+        <!--
         <img src="img/chefinho.gif" alt="chefinho gif" />
         <button id="btn-js">Clique aqui</button>
-        <h2 id="hello">
-
+        -->
+        <h2 class="title">
+            Título da página
         </h2>
         <script>
-            const $button = document.getElementById('btn-js');
-            const $hello = document.getElementById('hello');
-
-            $button.addEventListener("click", e => { e.preventDefault();
-                $hello.innerHTML += 'Fui clicado!<br>';
-            })
-
-            requestIdleCallback(function(){
-                let content='';
-                for (let i = 0; i < 10000; i++) {
-                    content += 'O poderoso chefinho!';
-                }
-                $hello.innerHTML = content;
-            })
+            setTimeout(function(){
+                document.querySelector('.title').classList.add('animate')
+            }, 1)
         </script>
     </body>
 

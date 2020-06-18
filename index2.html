@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Página com UX</title>
+        
+    </head>
+    <body>
+        <img src="img/chefinho.gif" />
+        <button id="btn-js" type="button">Clique aqui</button>
+        <h2 id="hello">
+
+
+        </h2>
+        <script>
+            const $button = documento.getElementById('bnt-js');
+            const $hello = documento.getElementById('hello');
+
+            $button.addEventListener("click", e => { e.preventDefault();
+            $hello.innerHTML += "Fui clicado!<br>";
+
+            });
+
+            for (let i = 0; i < 100; i++){
+                console.log("Chefinho!");
+            }
+        </script>
+    </body>
+</html>

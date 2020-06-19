@@ -1,15 +1,12 @@
+/*Evitar, pq é síncrono, portanto não vai carregar o css até que ele termine a request pra pegar esse import*/
+/*
+@import "https://fonts.googleapis.com/css?family=Roboto&display=swap";
+*/
+
 body {
     font-family: "Roboto", sans-serif;
 }
 
 .title {
-    position: relative;
-    transform: translateY(100px) translateX(0);
-    opacity: 0;
-    transition: all 2s linear;
-}
-
-.title.animate {
-    transform: translateY(0px) translateX(500px);
-    opacity: 1;
+    margin-left: 20px;
 }
